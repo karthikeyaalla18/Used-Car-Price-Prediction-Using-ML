@@ -1,0 +1,51 @@
+Project Report: Intelligent Used Car Price Predictor
+
+1. Introduction & Problem Statement
+
+The used car market is often opaque, with prices varying significantly based on subjective factors. Buyers and sellers frequently struggle to determine a fair market value for a vehicle, leading to financial loss or prolonged negotiation times. This project aims to solve this problem by developing an AI-powered application that predicts the selling price of used cars with high accuracy based on historical data and vehicle attributes.
+
+2. Project Objective
+
+To build a machine learning model that analyzes key vehicle parameters (such as age, kilometers driven, fuel type, and original price) to estimate a car's current market value. The model is deployed as a user-friendly web application, allowing non-technical users to get instant price valuations.
+
+3. Technical Stack
+
+Programming Language: Python
+
+Machine Learning Algorithm: Random Forest Regressor (Ensemble Learning)
+
+Web Framework: Streamlit (for the Dashboard)
+
+Data Processing: Pandas, NumPy
+
+Model Persistence: Pickle (pickle)
+
+4. Methodology & Workflow
+
+The project follows a standard Machine Learning pipeline:
+
+Data Collection & Cleaning: Used a dataset containing details of various car models. Data cleaning involved removing null values and standardizing fuel types (Petrol, Diesel, CNG, LPG, Electric).
+
+Feature Engineering:
+
+Categorical Encoding: Converted text data (e.g., "Petrol", "Manual") into numerical values using a mapping technique (e.g., Petrol=0, Diesel=1).
+
+Derived Metrics: Calculated the age of the car by subtracting the Manufacturing Year from the current year.
+
+Model Training: The Random Forest Regressor was chosen over Linear Regression because it handles non-linear relationships better (e.g., a car's value doesn't drop in a straight line; it drops sharply at first and then stabilizes).
+
+Deployment: The trained model was saved as a .pkl file and integrated into a Streamlit web app.
+
+5. Key Features of the Application
+
+Smart Auto-Fill: When a user selects a car model (e.g., "Toyota Fortuner"), the system automatically fetches and fills the average Showroom Price, reducing user effort and errors.
+
+Glassmorphism UI: The interface features a modern, translucent "glass" design with a professional background, making the tool visually engaging.
+
+Comprehensive Inputs: Takes into account crucial factors like Transmission Type (Automatic/Manual), Seller Type (Dealer vs. Individual), and Fuel Type.
+
+Real-Time Prediction: Delivers an instant estimated price in Lakhs (e.g., ₹ 5.45 Lakhs) upon clicking the "Calculate" button.
+
+6. Conclusion
+
+The "AutoValue Pro" system successfully bridges the gap between raw data and actionable insights. By leveraging the Random Forest algorithm, it provides a reliable benchmark for used car pricing, empowering users to make informed decisions in the second-hand automobile market.
